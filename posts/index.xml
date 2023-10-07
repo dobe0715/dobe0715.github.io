@@ -22,5 +22,19 @@
 하이하이 </description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://dobe0715.github.io/posts/convnext/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dobe0715.github.io/posts/convnext/</guid>
+      <description>A ConvNet for the 2020s 참고링크
+https://arxiv.org/abs/2201.03545 https://americanoisice.tistory.com/121 논문의 아이디어 기존에 computer vision에서는 &amp;ldquo;sliding window&amp;quot;기법이 주된방법이었다. 반면에 NLP분야에서는 transformer라는 엄청난 모델이 나왔고, 이를 CV와 결합하여 ViT라는 모델이 나오면서, 이 역시 SOTA를 밥먹듯이 하고있다..
+Transformer에서 사용한 기술들을 ConvNet에 적용한다면 어떻게 될까?
+이 때, ResNet만 가지고 발전시킨다.
+ConvNet의 Modernizing ResNet-50/200 vs Swin-T/B으로 모델을 대응시켜 각각 FLOPs를 맞춰서 비교한다.
+macro design 2) ResNeXt 3) inverted bottleneck 4) large kernel size 5) various layer-wise micro design 1.</description>
+    </item>
+    
   </channel>
 </rss>
