@@ -10,7 +10,17 @@
       <link>https://dobe0715.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://dobe0715.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Mon, 09 Oct 2023 17:29:30 +0900</lastBuildDate><atom:link href="https://dobe0715.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Imgtest</title>
+      <link>https://dobe0715.github.io/posts/imgtest/</link>
+      <pubDate>Mon, 09 Oct 2023 17:29:30 +0900</pubDate>
+      
+      <guid>https://dobe0715.github.io/posts/imgtest/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>ConvNeXt review</title>
       <link>https://dobe0715.github.io/posts/convnext/</link>
