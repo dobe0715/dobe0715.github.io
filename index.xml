@@ -10,15 +10,172 @@
       <link>https://dobe0715.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 09 Oct 2023 17:29:30 +0900</lastBuildDate><atom:link href="https://dobe0715.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://dobe0715.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Imgtest</title>
-      <link>https://dobe0715.github.io/posts/imgtest/</link>
-      <pubDate>Mon, 09 Oct 2023 17:29:30 +0900</pubDate>
+      <title></title>
+      <link>https://dobe0715.github.io/posts/adain-style-transfer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dobe0715.github.io/posts/imgtest/</guid>
-      <description></description>
+      <guid>https://dobe0715.github.io/posts/adain-style-transfer/</guid>
+      <description>paper review : Arbitrary Style Transfer in Real-time with Adaptive Instance Normalization 적응형 instance normalization을 이용해 임의의 style transfer를 진행하는 모델 1. 기존 모델 분석(neural style transfer) 1.1 Content Loss 그림의 내용(물체의 형태, 위치)에 대한 목적함수 $$L_{content}(\vec{p}, \vec{x}, l) = \cfrac{1}{2} \sum_{i, j}({F^l_{ij} - P^l_{ij}})^2$$
+1.2 Style Loss 그림의 스타일에 대한 목적함수 Gram matrix $$G^l \in R^{N_l \times N_l}$$ $$G^l_{ij} = \sum_k{F^l_{ik} F^l_{jk}}$$
+$l$번째 레이어의 $i$와$j$번째 feature map의 correlation을 파악하는 척도.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dobe0715.github.io/posts/classification-cnn-models/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dobe0715.github.io/posts/classification-cnn-models/</guid>
+      <description>Inception Net(GoogLeNet) https://arxiv.org/pdf/1409.4842.pdf 참고 블로그 https://phil-baek.tistory.com/entry/3-GoogLeNet-Going-deeper-with-convolutions-%EB%85%BC%EB%AC%B8-%EB%A6%AC%EB%B7%B0 모델 나오게 된 배경 DNN의 성능을 향상시키는 방법 가장 직접적인 방법은 size를 늘리는 것에서 시작
+구체적으로, depth/width를 증가시키면 되는데 이 때 두가지 문제점이 있다.
+파라미터 수의 증가
+파라미터가 늘어날 경우, 이에 비하여 학습데이터가 부족하면 오버피팅에 일어나기 쉽다.
+컴퓨팅 자원 사용량의 증가
+만약, 두개의 conv layer가 연속으로 있는 상황에서, 거의 대부분의 가중치가 0이면, 계산에 있어서 버려지는 자원이 많아진다.
+but, 컴퓨팅자원은 한정적이므로 효율적으로 분배하는 것이 중요</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dobe0715.github.io/posts/classifier-free-diffusion-guidance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dobe0715.github.io/posts/classifier-free-diffusion-guidance/</guid>
+      <description>Classifier-free Diffusion Guidance(2022) (참고링크)
+youtube : https://www.youtube.com/watch?v=Q_o0SpXv9kU blog : https://kimjy99.github.io/%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0/cfdg/ paper : https://arxiv.org/abs/2207.12598 Contributions unconditional model을 학습하면서 동시에 conditional model을 학습시킬 수 있다. 기존에 비해 학습 파이프라인을 간단화 하였다, BackGround Diffusion Models Beat GANs on Image Synthesis(Classifier Guidance 제안) 핵심은, conditional 모델의 likelihood 식을 잘 전개하면, unconditional 모델과 classifier 모델로 나눠 학습시킬 수 있다는 것이다.
+$p_{\theta, \phi}(x_t|x_{t+1}, y) \simeq Zp_{\theta}(x_t|x_{t+1})p_{\phi}(y|x_t) \simeq \log{p_\theta(z)} + C_4, z \sim N(\mu_\phi + \Sigma_\phi g, \Sigma_\phi)$</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dobe0715.github.io/posts/ddpm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dobe0715.github.io/posts/ddpm/</guid>
+      <description>Denoising Diffusion Probabilistic Models 참고 링크
+Diffusion Model 수학이 포함된 tutorial : https://www.youtube.com/watch?v=uFoGaIVHfoE learn open cv에서 올린 포스트 : https://learnopencv.com/denoising-diffusion-probabilistic-models/ Paper
+https://arxiv.org/pdf/2006.11239.pdf 논문에서의 아이디어 데이터에 매우 작은 노이즈를 추가하는 process를 중첩해서 해주면 normal distribution 까지 보낼 수 있다. 그리고 이것을 마찬가지로 순차적으로 denoising 해줘 이미지를 복원할 수 있다. 해야할 것 forward : noise의 중첩을 어떻게 표현할 것인지? backward : noising과정을 어떻게 파라미터화 해서 loss를 구하고 backpropa할 것인가? 어떻게? markov chain을 가정하여 noise의 중첩을 설명</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dobe0715.github.io/posts/more-diffusion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dobe0715.github.io/posts/more-diffusion/</guid>
+      <description>참고자료 blogs
+(lil log, what are Diffusion Models?) : https://lilianweng.github.io/posts/2021-07-11-diffusion-models/ (Yang song, Generative Modeling by Estimating gradients of the data distribution) : https://yang-song.net/blog/2021/score/ 한국 블로그 : https://deepseow.tistory.com/61 improved DDPM notion : https://sang-yun-lee.notion.site/Improved-Denoising-Diffusion-Probabilistic-Models-efa847335aef4163bfd3ee96c176f659 Diffusion models beats GANs : https://sang-yun-lee.notion.site/Diffusion-Models-Beat-GANs-on-Image-Synthesis-eb1f3826618d42e89d92e489c39f1371 papers
+(Improved Denoising Diffusion Probablistic Models) : https://arxiv.org/pdf/2102.09672.pdf (Diffusion models beats GANs on Image synthesis) : https://arxiv.org/pdf/2105.05233.pdf youtubes
+(improved DDPM) : https://www.youtube.com/watch?v=8dchQOqvrCE (Diffusion models beats GANs) : https://www.youtube.com/watch?v=bSqA2AIaHy8&amp;amp;t=327s Improved DDPM (contribution)
+reverse할 때 variance term도 어느정도 학습 하게 해서 NLL(negative log-likelihood)값을 낮추었다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dobe0715.github.io/posts/neural-ode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dobe0715.github.io/posts/neural-ode/</guid>
+      <description>Neural Ordinary Differential Equations 참고자료
+paper : https://arxiv.org/abs/1806.07366 blog : https://seewoo5.tistory.com/12 youtube : https://www.youtube.com/watch?v=UegW1cIRee4&amp;amp;t=1594s Contributions 특별한 backpropagation을 사용해 Memory의 절약을 이뤘다. 기존의 반복적인 network들을 일반화하여 해석할 수 있다. forward method ResNet의 경우를 살펴보면, residual connection이 반복되는 구조라고 생각 할 수 있다.
+이 때, hidden state가 다음과 같이 residual block을 거치는 과정을 재귀적으로 표현할 수 있다.
+$h_{t+1} = h_t + f(h_t, \theta_t)$
+이를 풀어서 쓰면, T번째 state는 다음과 같다. $h_T = h_0 + f(h_0, \theta_0) + f(h_1, \theta_1) + &amp;hellip; + f(h_{T-1}, \theta_{T-1})$</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dobe0715.github.io/posts/pix2pix-zero/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dobe0715.github.io/posts/pix2pix-zero/</guid>
+      <description>Review : Zero-shot Image-to-Image Translation(pix2pix zero) pre-train된 모델만으로 pix2pix 작업을 완성도 있게 수행한 모델 1. 핵심내용 traing free, prompt free input text prompting 없이 자동으로 direction editing cross-attention guidance를 통해 content 보존 auto correlation regularization conditional GAN distillation 2. Related Works Deep image editing with GANs 기존의 연구들은 target imgae의 latent vector를 disentangle한 space로 보냄으로써, latent vector를 조작하여 image translation을 수행하였다. ex) stylegan에서의 W space single category에 대해 효과적, high quality inversion 단점은 image set을 내가 잘 사전에 준비해놔야한다&amp;hellip; pre trained GAN이용!</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dobe0715.github.io/posts/score-based-model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dobe0715.github.io/posts/score-based-model/</guid>
+      <description>Score Based Model (Reference)
+2011(denoising score matching) https://www.iro.umontreal.ca/~vincentp/Publications/smdae_techreport.pdf 2019(score based generative model) https://arxiv.org/pdf/1907.05600.pdf 2021(score based SDE model) https://arxiv.org/pdf/2011.13456.pdf 2021(SDEdit) https://arxiv.org/pdf/2108.01073.pdf (youtube)
+(VAE 강의) https://www.youtube.com/watch?v=o_peo6U7IRM (시립대 강의) https://www.youtube.com/watch?v=HjriJyr8VZ8&amp;amp;list=PLeiav_J6JcY8iFItzNZ_6PMlz9W4_jz5J&amp;amp;index=57 (diffusion 강의) https://www.youtube.com/watch?v=uFoGaIVHfoE Goal of Generative Model 대상으로 하는 데이터들의 실제 분포 $p(x)$가 존재한다고 가정. 이를 데이터들을 가지고, $p(x)$와 $g_{\theta}(x)$가 유사해지도록 파라미터 $\theta$를 학습시킨다. 이후, 새로운 데이터를 생성한다는 것은 학습한 $g_{\theta}$에 $x_0$를 대입하여 $g_{\theta}(x_0)$ 라는 결과물을 sampling하는 것이다. 이때, $p(x)$의 분포를 모를 때(Implicit), 알 때(Explicit)의 경우 파라미터의 학습방법이 달라진다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dobe0715.github.io/posts/sdedit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dobe0715.github.io/posts/sdedit/</guid>
+      <description>import sys sys.version &#39;3.10.11 (main, Apr 5 2023, 14:15:10) [GCC 9.4.0]&#39; !git clone https://github.com/ermongroup/SDEdit.git %cd /content/SDEdit Cloning into &#39;SDEdit&#39;... remote: Enumerating objects: 156, done.[K remote: Counting objects: 100% (155/155), done.[K remote: Compressing objects: 100% (89/89), done.[K remote: Total 156 (delta 69), reused 129 (delta 57), pack-reused 1[K Receiving objects: 100% (156/156), 37.39 MiB | 7.62 MiB/s, done. Resolving deltas: 100% (69/69), done. /content/SDEdit from google.colab import drive drive.mount(&amp;#39;/content/drive&amp;#39;) Mounted at /content/drive import numpy as np import matplotlib.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dobe0715.github.io/posts/stable-diffusion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dobe0715.github.io/posts/stable-diffusion/</guid>
+      <description>High-Resolution Image Synthesis with Satent Diffusion Models(Stable Diffusion) 참고자료
+paper : https://arxiv.org/abs/2112.10752 youtube : https://www.youtube.com/watch?v=rC34475rEnw blog : https://kimjy99.github.io/%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0/ldm/ Contributions 기존의 DM들에 비해 소모되는 컴퓨팅 자원을 훨씬 줄였다. =&amp;gt; 탄소배출 감소..^^ space에 따라 2-stage로 나눠 학습으로써 더욱 효율적인 모델을 찾을 수 있었다. cross-attention을 U-Net에 적용하여 다양한 class condition을 줄 수 있다. 사전학습모델을 무료공개했다. 기존의 이미지 생성모델들 GAN
+장점 : 좋은 퀄리티의 고해상도 이미지 단점 : 데이터 분포 전체 학습에서의 어려움(mode collapse 위험) VAE(Likelihood-based)</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dobe0715.github.io/posts/style-transfer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dobe0715.github.io/posts/style-transfer/</guid>
+      <description>Review : Image Style Transfer Using Convolutional Neural Networks 딥러닝을 이용하여 style을 합성을 시도한 초기 모델. 0. 딥러닝 모델 사전에 학습되어있는 VGG-19를 사용. 이중에서 5개의 conv계층 가져옴. 노이즈($\vec{x}$)와 실제 이미지 사이의 loss를 줄여 노이즈를 실제 이미지로 변환하는 과정으로 추론. 1. 목적함수 각각의 loss를 설계하는데에 있어서 CNN의 feature map의 성질을 적극 활용하였다. 층이 깊어질 수록, chanel수는 증가하고, filter크기는 감소한다! 층이 깊어질 수록, style은 많이 담고, content는 적게담는다! content는 filter에서의 구체적인 값, style은 filter간의 분포도 값에 대응 시켰다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dobe0715.github.io/posts/stylegan2-ada/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dobe0715.github.io/posts/stylegan2-ada/</guid>
+      <description>Review : Training Generative Adversarial Networks with Limited Data (stylegan2-ada) ADA(Adaptive Discriminator Augmentation) 필요한 데이터 수십, 수백만장 -&amp;gt; 수 천장 GAN 데이터 많이 필요한 이유 discriminator가 적은 양의 데이터 셋에 과적합 될 수 있다. (a)를 보면, 14만장이 모여야 과적합 발생하지 않음을 볼 수 있다. (b), (c)를 보면, fid score로부터 계속 멀어짐을 알 수 있고, 검증데이터와 생성데이터는 가깝게 판단하는 반면에, 훈련데이터는 반대로, 완전히 과적합 상태에 가까워진다는 것을 알 수 있다. 무려 2만, 5만인데도.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dobe0715.github.io/posts/vae/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dobe0715.github.io/posts/vae/</guid>
+      <description>VAE (송경우교수님 딥러닝강의 2022) https://www.youtube.com/watch?v=V-lWbJtNzTc&amp;amp;list=PLeiav_J6JcY8iFItzNZ_6PMlz9W4_jz5J&amp;amp;index=58
+Generative model MLE의 관점에서 보았을 때, $p_\theta(x)$를 최대화 하는 파라미터를 찾는 것이다! 결국 목적함수는,
+$$\theta^* = \arg\max\limits_{\theta}\cfrac{1}{N}\sum_{i=1}^N\log{p_\theta(x_i)}$$
+이다.
+Variational Inference 어떤 조건이 주어졌을 때의 확률($p(z|x)$)을 다루기 쉬운 확률분포($q(z)$)로 근사하는 것. 즉, log-likelihood($\log{p(x_i)}$)의 lower bound인 $L$를 maximize하면 결국에 $q_i(z)$가 $p(z|x_i)$와 가까워져, 실제 샘플에 대응하는 latent를 더 잘 뽑아줄 수 있게 된다.
+이를 학습하기 위해 elbo를 maximize 하는 과정을 살펴보면,
+i번째 샘플 데이터학습할 때 마다, $q_i$로부터 $\mu_i, \Sigma_i$를 얻어내고, 여기로부터의 분포에서 다시 $\hat{x}$를 뽑아내서($\theta$), $x_i$와 닮도록 학습한다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dobe0715.github.io/posts/variational-diffusion-models/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dobe0715.github.io/posts/variational-diffusion-models/</guid>
+      <description>Variational Diffusion Models(2021) 참고링크
+유튜브 : https://www.youtube.com/watch?v=yR81b3UxgaI&amp;amp;t=1354s 노션 : https://sang-yun-lee.notion.site/Variational-Diffusion-Models-f72d9cb1a2004a9088470c95cdc929e3 논문 : https://arxiv.org/abs/2107.00630 Contributions likelihood SOTA 찍었다. 모델 파라미터($w$)와 동시에 noise schadule($\gamma$)도 학습시켰다. VLB를 SNR를 통해 간단히 표현하였다. continuous-time VLB값은 noise schedule과 관련없음을 보였다.(각 끝점과 관련있음) Model 1. Forward time diffusion process $x$ : 주어진 데이터 $p(x)$ : 측정된 x의 주변분포 $z_t$ : $t$ 시간에서의 latent variable 0. definitions $q(z_t|x) = N(\alpha_t x, \sigma_t^2 I)$ $SNR(t) = \cfrac{\alpha_t^2}{\sigma_t^2}$ 이 때, SNR은 단조 감소를 만족시켜야 한다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dobe0715.github.io/posts/wgan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dobe0715.github.io/posts/wgan/</guid>
+      <description>Review : Wasserstein GAN 새로운 metric을 통한 GAN의 loss를 제시. 분류모델같은경우는 정답이 확실히 정해져있어서 모델의 loss를 확실히 정량화 할 수 있었다.(cross-entropy, mse 등) 하지만 생성모델은 어느정도가 정답과 가까운지 정량적으로 측정하기 힘들다. 이러한 것을 해결하기 위한 metric이다. 4가지 거리개념 주어진 가정 $\mathcal{X}$ : compact metric(유계인 닫힌 공간) $\Sigma$ : $\mathcal{X}$의 Borel subset들의 집합 (측정가능한 집합에 대해서만 확률을 논하겠다) $Prob(\mathcal{X})$ : $\mathcal{X}$의 확률측도공간 두 분포 $\mathbb{P}_r, \mathbb{P}_g \in Prob(\mathcal{X})$에 대하여&amp;hellip;
+1. TV(Total Variation) distance $$\delta(\mathbb{P}_r, \mathbb{P}g) = \sup{A \in \Sigma}|\mathbb{P}_r(A)- \mathbb{P}_g(A)|$$</description>
     </item>
     
     <item>

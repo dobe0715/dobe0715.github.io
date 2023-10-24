@@ -2,19 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://dobe0715.github.io/posts/imgtest/</loc>
-    <lastmod>2023-10-09T17:29:30+09:00</lastmod>
+    <loc>https://dobe0715.github.io/posts/adain-style-transfer/</loc>
   </url><url>
-    <loc>https://dobe0715.github.io/posts/</loc>
-    <lastmod>2023-10-09T17:29:30+09:00</lastmod>
+    <loc>https://dobe0715.github.io/posts/classification-cnn-models/</loc>
   </url><url>
-    <loc>https://dobe0715.github.io/</loc>
-    <lastmod>2023-10-09T17:29:30+09:00</lastmod>
+    <loc>https://dobe0715.github.io/posts/classifier-free-diffusion-guidance/</loc>
+  </url><url>
+    <loc>https://dobe0715.github.io/posts/ddpm/</loc>
+  </url><url>
+    <loc>https://dobe0715.github.io/posts/more-diffusion/</loc>
+  </url><url>
+    <loc>https://dobe0715.github.io/posts/neural-ode/</loc>
+  </url><url>
+    <loc>https://dobe0715.github.io/posts/pix2pix-zero/</loc>
+  </url><url>
+    <loc>https://dobe0715.github.io/posts/score-based-model/</loc>
+  </url><url>
+    <loc>https://dobe0715.github.io/posts/sdedit/</loc>
+  </url><url>
+    <loc>https://dobe0715.github.io/posts/stable-diffusion/</loc>
+  </url><url>
+    <loc>https://dobe0715.github.io/posts/style-transfer/</loc>
+  </url><url>
+    <loc>https://dobe0715.github.io/posts/stylegan2-ada/</loc>
+  </url><url>
+    <loc>https://dobe0715.github.io/posts/vae/</loc>
+  </url><url>
+    <loc>https://dobe0715.github.io/posts/variational-diffusion-models/</loc>
+  </url><url>
+    <loc>https://dobe0715.github.io/posts/wgan/</loc>
   </url><url>
     <loc>https://dobe0715.github.io/categories/</loc>
   </url><url>
     <loc>https://dobe0715.github.io/posts/convnext/</loc>
   </url><url>
+    <loc>https://dobe0715.github.io/posts/</loc>
+  </url><url>
     <loc>https://dobe0715.github.io/tags/</loc>
+  </url><url>
+    <loc>https://dobe0715.github.io/</loc>
   </url>
 </urlset>
