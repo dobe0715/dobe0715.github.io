@@ -12,7 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://dobe0715.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
+      <title>AdaIN style transfer</title>
       <link>https://dobe0715.github.io/posts/adain-style-transfer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -23,7 +23,18 @@ $l$번째 레이어의 $i$와$j$번째 feature map의 correlation을 파악하�
     </item>
     
     <item>
-      <title></title>
+      <title>Classifier-free Diffusion Guidance review</title>
+      <link>https://dobe0715.github.io/posts/classifier-free-diffusion-guidance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dobe0715.github.io/posts/classifier-free-diffusion-guidance/</guid>
+      <description>Classifier-free Diffusion Guidance(2022) (참고링크)
+youtube : https://www.youtube.com/watch?v=Q_o0SpXv9kU blog : https://kimjy99.github.io/%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0/cfdg/ paper : https://arxiv.org/abs/2207.12598 Contributions unconditional model을 학습하면서 동시에 conditional model을 학습시킬 수 있다. 기존에 비해 학습 파이프라인을 간단화 하였다, BackGround Diffusion Models Beat GANs on Image Synthesis(Classifier Guidance 제안) 핵심은, conditional 모델의 likelihood 식을 잘 전개하면, unconditional 모델과 classifier 모델로 나눠 학습시킬 수 있다는 것이다.
+$p_{\theta, \phi}(x_t|x_{t+1}, y) \simeq Zp_{\theta}(x_t|x_{t+1})p_{\phi}(y|x_t) \simeq \log{p_\theta(z)} + C_4, z \sim N(\mu_\phi + \Sigma_\phi g, \Sigma_\phi)$</description>
+    </item>
+    
+    <item>
+      <title>CNN 모델 정리</title>
       <link>https://dobe0715.github.io/posts/classification-cnn-models/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -38,18 +49,21 @@ but, 컴퓨팅자원은 한정적이므로 효율적으로 분배하는 것이 �
     </item>
     
     <item>
-      <title></title>
-      <link>https://dobe0715.github.io/posts/classifier-free-diffusion-guidance/</link>
+      <title>ConvNeXt review</title>
+      <link>https://dobe0715.github.io/posts/convnext/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dobe0715.github.io/posts/classifier-free-diffusion-guidance/</guid>
-      <description>Classifier-free Diffusion Guidance(2022) (참고링크)
-youtube : https://www.youtube.com/watch?v=Q_o0SpXv9kU blog : https://kimjy99.github.io/%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0/cfdg/ paper : https://arxiv.org/abs/2207.12598 Contributions unconditional model을 학습하면서 동시에 conditional model을 학습시킬 수 있다. 기존에 비해 학습 파이프라인을 간단화 하였다, BackGround Diffusion Models Beat GANs on Image Synthesis(Classifier Guidance 제안) 핵심은, conditional 모델의 likelihood 식을 잘 전개하면, unconditional 모델과 classifier 모델로 나눠 학습시킬 수 있다는 것이다.
-$p_{\theta, \phi}(x_t|x_{t+1}, y) \simeq Zp_{\theta}(x_t|x_{t+1})p_{\phi}(y|x_t) \simeq \log{p_\theta(z)} + C_4, z \sim N(\mu_\phi + \Sigma_\phi g, \Sigma_\phi)$</description>
+      <guid>https://dobe0715.github.io/posts/convnext/</guid>
+      <description>A ConvNet for the 2020s 참고링크
+https://arxiv.org/abs/2201.03545 https://americanoisice.tistory.com/121 논문의 아이디어 기존에 computer vision에서는 &amp;ldquo;sliding window&amp;quot;기법이 주된방법이었다. 반면에 NLP분야에서는 transformer라는 엄청난 모델이 나왔고, 이를 CV와 결합하여 ViT라는 모델이 나오면서, 이 역시 SOTA를 밥먹듯이 하고있다..
+Transformer에서 사용한 기술들을 ConvNet에 적용한다면 어떻게 될까?
+이 때, ResNet만 가지고 발전시킨다.
+ConvNet의 Modernizing ResNet-50/200 vs Swin-T/B으로 모델을 대응시켜 각각 FLOPs를 맞춰서 비교한다.
+macro design 2) ResNeXt 3) inverted bottleneck 4) large kernel size 5) various layer-wise micro design 1.</description>
     </item>
     
     <item>
-      <title></title>
+      <title>Denoising Diffusion Probabilistic Models(DDPM) reivew</title>
       <link>https://dobe0715.github.io/posts/ddpm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -60,7 +74,27 @@ https://arxiv.org/pdf/2006.11239.pdf 논문에서의 아이디어 데이터에 �
     </item>
     
     <item>
-      <title></title>
+      <title>High-Resolution Image Synthesis with Satent Diffusion Models(Stable Diffusion) review</title>
+      <link>https://dobe0715.github.io/posts/stable-diffusion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dobe0715.github.io/posts/stable-diffusion/</guid>
+      <description>High-Resolution Image Synthesis with Satent Diffusion Models(Stable Diffusion) 참고자료
+paper : https://arxiv.org/abs/2112.10752 youtube : https://www.youtube.com/watch?v=rC34475rEnw blog : https://kimjy99.github.io/%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0/ldm/ Contributions 기존의 DM들에 비해 소모되는 컴퓨팅 자원을 훨씬 줄였다. =&amp;gt; 탄소배출 감소..^^ space에 따라 2-stage로 나눠 학습으로써 더욱 효율적인 모델을 찾을 수 있었다. cross-attention을 U-Net에 적용하여 다양한 class condition을 줄 수 있다. 사전학습모델을 무료공개했다. 기존의 이미지 생성모델들 GAN
+장점 : 좋은 퀄리티의 고해상도 이미지 단점 : 데이터 분포 전체 학습에서의 어려움(mode collapse 위험) VAE(Likelihood-based)</description>
+    </item>
+    
+    <item>
+      <title>Image Style Transfer Using Convolutional Neural Networks review</title>
+      <link>https://dobe0715.github.io/posts/style-transfer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dobe0715.github.io/posts/style-transfer/</guid>
+      <description>Review : Image Style Transfer Using Convolutional Neural Networks 딥러닝을 이용하여 style을 합성을 시도한 초기 모델. 0. 딥러닝 모델 사전에 학습되어있는 VGG-19를 사용. 이중에서 5개의 conv계층 가져옴. 노이즈($\vec{x}$)와 실제 이미지 사이의 loss를 줄여 노이즈를 실제 이미지로 변환하는 과정으로 추론. 1. 목적함수 각각의 loss를 설계하는데에 있어서 CNN의 feature map의 성질을 적극 활용하였다. 층이 깊어질 수록, chanel수는 증가하고, filter크기는 감소한다! 층이 깊어질 수록, style은 많이 담고, content는 적게담는다! content는 filter에서의 구체적인 값, style은 filter간의 분포도 값에 대응 시켰다.</description>
+    </item>
+    
+    <item>
+      <title>Improved DDPM, Diffusion models beat GANs</title>
       <link>https://dobe0715.github.io/posts/more-diffusion/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -73,7 +107,7 @@ reverse할 때 variance term도 어느정도 학습 하게 해서 NLL(negative l
     </item>
     
     <item>
-      <title></title>
+      <title>Neural Ordinary Differential Equations review</title>
       <link>https://dobe0715.github.io/posts/neural-ode/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -86,16 +120,7 @@ $h_{t+1} = h_t + f(h_t, \theta_t)$
     </item>
     
     <item>
-      <title></title>
-      <link>https://dobe0715.github.io/posts/pix2pix-zero/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dobe0715.github.io/posts/pix2pix-zero/</guid>
-      <description>Review : Zero-shot Image-to-Image Translation(pix2pix zero) pre-train된 모델만으로 pix2pix 작업을 완성도 있게 수행한 모델 1. 핵심내용 traing free, prompt free input text prompting 없이 자동으로 direction editing cross-attention guidance를 통해 content 보존 auto correlation regularization conditional GAN distillation 2. Related Works Deep image editing with GANs 기존의 연구들은 target imgae의 latent vector를 disentangle한 space로 보냄으로써, latent vector를 조작하여 image translation을 수행하였다. ex) stylegan에서의 W space single category에 대해 효과적, high quality inversion 단점은 image set을 내가 잘 사전에 준비해놔야한다&amp;hellip; pre trained GAN이용!</description>
-    </item>
-    
-    <item>
-      <title></title>
+      <title>Score Based Models 정리본</title>
       <link>https://dobe0715.github.io/posts/score-based-model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -106,7 +131,7 @@ $h_{t+1} = h_t + f(h_t, \theta_t)$
     </item>
     
     <item>
-      <title></title>
+      <title>SDEdit 실습</title>
       <link>https://dobe0715.github.io/posts/sdedit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -115,27 +140,7 @@ $h_{t+1} = h_t + f(h_t, \theta_t)$
     </item>
     
     <item>
-      <title></title>
-      <link>https://dobe0715.github.io/posts/stable-diffusion/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dobe0715.github.io/posts/stable-diffusion/</guid>
-      <description>High-Resolution Image Synthesis with Satent Diffusion Models(Stable Diffusion) 참고자료
-paper : https://arxiv.org/abs/2112.10752 youtube : https://www.youtube.com/watch?v=rC34475rEnw blog : https://kimjy99.github.io/%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0/ldm/ Contributions 기존의 DM들에 비해 소모되는 컴퓨팅 자원을 훨씬 줄였다. =&amp;gt; 탄소배출 감소..^^ space에 따라 2-stage로 나눠 학습으로써 더욱 효율적인 모델을 찾을 수 있었다. cross-attention을 U-Net에 적용하여 다양한 class condition을 줄 수 있다. 사전학습모델을 무료공개했다. 기존의 이미지 생성모델들 GAN
-장점 : 좋은 퀄리티의 고해상도 이미지 단점 : 데이터 분포 전체 학습에서의 어려움(mode collapse 위험) VAE(Likelihood-based)</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://dobe0715.github.io/posts/style-transfer/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dobe0715.github.io/posts/style-transfer/</guid>
-      <description>Review : Image Style Transfer Using Convolutional Neural Networks 딥러닝을 이용하여 style을 합성을 시도한 초기 모델. 0. 딥러닝 모델 사전에 학습되어있는 VGG-19를 사용. 이중에서 5개의 conv계층 가져옴. 노이즈($\vec{x}$)와 실제 이미지 사이의 loss를 줄여 노이즈를 실제 이미지로 변환하는 과정으로 추론. 1. 목적함수 각각의 loss를 설계하는데에 있어서 CNN의 feature map의 성질을 적극 활용하였다. 층이 깊어질 수록, chanel수는 증가하고, filter크기는 감소한다! 층이 깊어질 수록, style은 많이 담고, content는 적게담는다! content는 filter에서의 구체적인 값, style은 filter간의 분포도 값에 대응 시켰다.</description>
-    </item>
-    
-    <item>
-      <title></title>
+      <title>Training Generative Adversarial Networks with Limited Data (stylegan2-ada) review</title>
       <link>https://dobe0715.github.io/posts/stylegan2-ada/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -144,7 +149,7 @@ paper : https://arxiv.org/abs/2112.10752 youtube : https://www.youtube.com/watch
     </item>
     
     <item>
-      <title></title>
+      <title>VAE 정리본</title>
       <link>https://dobe0715.github.io/posts/vae/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -159,7 +164,7 @@ i번째 샘플 데이터학습할 때 마다, $q_i$로부터 $\mu_i, \Sigma_i$�
     </item>
     
     <item>
-      <title></title>
+      <title>Variational Diffusion Models review</title>
       <link>https://dobe0715.github.io/posts/variational-diffusion-models/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -169,7 +174,7 @@ i번째 샘플 데이터학습할 때 마다, $q_i$로부터 $\mu_i, \Sigma_i$�
     </item>
     
     <item>
-      <title></title>
+      <title>Wasserstein GAN review</title>
       <link>https://dobe0715.github.io/posts/wgan/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -179,17 +184,12 @@ i번째 샘플 데이터학습할 때 마다, $q_i$로부터 $\mu_i, \Sigma_i$�
     </item>
     
     <item>
-      <title>ConvNeXt review</title>
-      <link>https://dobe0715.github.io/posts/convnext/</link>
+      <title>Zero-shot Image-to-Image Translation(pix2pix zero) review</title>
+      <link>https://dobe0715.github.io/posts/pix2pix-zero/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dobe0715.github.io/posts/convnext/</guid>
-      <description>A ConvNet for the 2020s 참고링크
-https://arxiv.org/abs/2201.03545 https://americanoisice.tistory.com/121 논문의 아이디어 기존에 computer vision에서는 &amp;ldquo;sliding window&amp;quot;기법이 주된방법이었다. 반면에 NLP분야에서는 transformer라는 엄청난 모델이 나왔고, 이를 CV와 결합하여 ViT라는 모델이 나오면서, 이 역시 SOTA를 밥먹듯이 하고있다..
-Transformer에서 사용한 기술들을 ConvNet에 적용한다면 어떻게 될까?
-이 때, ResNet만 가지고 발전시킨다.
-ConvNet의 Modernizing ResNet-50/200 vs Swin-T/B으로 모델을 대응시켜 각각 FLOPs를 맞춰서 비교한다.
-macro design 2) ResNeXt 3) inverted bottleneck 4) large kernel size 5) various layer-wise micro design 1.</description>
+      <guid>https://dobe0715.github.io/posts/pix2pix-zero/</guid>
+      <description>Review : Zero-shot Image-to-Image Translation(pix2pix zero) pre-train된 모델만으로 pix2pix 작업을 완성도 있게 수행한 모델 1. 핵심내용 traing free, prompt free input text prompting 없이 자동으로 direction editing cross-attention guidance를 통해 content 보존 auto correlation regularization conditional GAN distillation 2. Related Works Deep image editing with GANs 기존의 연구들은 target imgae의 latent vector를 disentangle한 space로 보냄으로써, latent vector를 조작하여 image translation을 수행하였다. ex) stylegan에서의 W space single category에 대해 효과적, high quality inversion 단점은 image set을 내가 잘 사전에 준비해놔야한다&amp;hellip; pre trained GAN이용!</description>
     </item>
     
   </channel>
